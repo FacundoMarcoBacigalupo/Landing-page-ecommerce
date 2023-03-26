@@ -15,7 +15,7 @@ alert("Bienvenido a MFL")
 
 
 
-                                                //Servicio Jupiter
+                                                //Servicio JUPITER
     function jupiter(){
         let respuestaCliente = prompt("Este servicio se llama " + servicio1 + " y tiene un valor de $9000 ARS, ¿Desea continuar con este servicio? SI-NO").toUpperCase().trim( )
 
@@ -30,7 +30,7 @@ alert("Bienvenido a MFL")
 
 
 
-                                                //Servicio Saturno
+                                                //Servicio SATURNO
     function saturno(){
         let respuestaCliente = prompt("Este servicio se llama " + servicio2 + " y tiene un valor de $11000 ARS, ¿Desea continuar con este servicio? SI-NO").toUpperCase().trim( )
 
@@ -45,7 +45,7 @@ alert("Bienvenido a MFL")
 
 
 
-                                                 //Servicio Urano                           
+                                                 //Servicio URANO                           
     function urano(){
          let respuestaCliente = prompt("Este servicio se llama " + servicio3 + " y tiene un valor de $15000 ARS, ¿Desea continuar con este servicio? SI-NO").toUpperCase().trim( )
 
