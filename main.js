@@ -1,5 +1,6 @@
 //Primero se le da la bienvenida al cliente, luego se le pregunta si está interesado en nuestros Servicios, después se le pregunta en cuál de los servicios tiene interés y se termina.
 
+
 alert("Bienvenido a MFL")
 
     const servicio1 = "Jupiter"
@@ -7,7 +8,8 @@ alert("Bienvenido a MFL")
     const servicio3 = "Urano"
 
 
-                                 //Funcion que contiene el nombre de los 3 servicios
+
+                                 //Funcion que contiene el nombre de los 3 servicios.
     function serviciosMFl(){
        let servicios = servicio1 + ", " + servicio2 + ", " + servicio3
        return servicios
@@ -15,7 +17,8 @@ alert("Bienvenido a MFL")
 
 
 
-                                                //Servicio JUPITER
+
+                                                //Servicio JUPITER.
     function jupiter(){
         let respuestaCliente = prompt("Este servicio se llama " + servicio1 + " y tiene un valor de $9000 ARS, ¿Desea continuar con este servicio? SI-NO").toUpperCase().trim( )
 
@@ -30,7 +33,8 @@ alert("Bienvenido a MFL")
 
 
 
-                                                //Servicio SATURNO
+
+                                                //Servicio SATURNO.
     function saturno(){
         let respuestaCliente = prompt("Este servicio se llama " + servicio2 + " y tiene un valor de $11000 ARS, ¿Desea continuar con este servicio? SI-NO").toUpperCase().trim( )
 
@@ -45,7 +49,8 @@ alert("Bienvenido a MFL")
 
 
 
-                                                 //Servicio URANO                           
+
+                                                 //Servicio URANO.                         
     function urano(){
          let respuestaCliente = prompt("Este servicio se llama " + servicio3 + " y tiene un valor de $15000 ARS, ¿Desea continuar con este servicio? SI-NO").toUpperCase().trim( )
 
@@ -57,6 +62,7 @@ alert("Bienvenido a MFL")
         }
     return("Gracias por su tiempo.")
     }
+
 
 
 

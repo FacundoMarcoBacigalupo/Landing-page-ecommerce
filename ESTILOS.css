@@ -31,7 +31,6 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: 50px;
     text-align: center;
-    background-color: brown;
   }
   
   h3{
@@ -48,4 +47,9 @@
   }
   p::first-letter{
     font-size: 30px;
+    color: brown;
+  }
+
+  footer{
+    background-color:rgb(122, 122, 121);
   }
