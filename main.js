@@ -3,72 +3,63 @@
 
 alert("Bienvenido a MFL")
 
-    const servicio1 = "Jupiter"
-    const servicio2 = "Saturno"
-    const servicio3 = "Urano"
+    const servicio1 = " Jupiter"
+    const servicio2 = " Saturno"
+    const servicio3 = " Urano"
 
-
-
-                                 //Funcion que contiene el nombre de los 3 servicios.
-    function serviciosMFl(){
-       let servicios = servicio1 + ", " + servicio2 + ", " + servicio3
-       return servicios
-    }
+    const serviciosMFl = [servicio1,servicio2,servicio3]
 
 
 
 
-                                                //Servicio JUPITER.
-    function jupiter(){
-        let respuestaCliente = prompt("Este servicio se llama " + servicio1 + " y tiene un valor de $9000 ARS, ¿Desea continuar con este servicio? SI-NO").toUpperCase().trim( )
 
-        if (respuestaCliente === true || respuestaCliente === "SI"){
-            alert ("+54 11 2904439 este es nuestro numero de celular para contactarnos y concreatar una reunion, lo esperamos.")
-        }
-        else{
-            alert("Esperamos volver a verte")
-        }   
-    return("Gracias por su tiempo.")
-    }
+                                            //Funcion constructura
+    function Servicio(nombre, contenido, precio){
 
+            this.nombre = nombre
+            this.contenido = contenido
+            this.precio = precio
 
+            this.info = function(){
+                let respuestaCliente = prompt(`Este servicio se llama ${nombre}, tiene un valor de ${precio}, cuenta con ${contenido}, ¿Desea continuar con este servicio? SI-NO`).toUpperCase().trim( )
 
-
-                                                //Servicio SATURNO.
-    function saturno(){
-        let respuestaCliente = prompt("Este servicio se llama " + servicio2 + " y tiene un valor de $11000 ARS, ¿Desea continuar con este servicio? SI-NO").toUpperCase().trim( )
-
-        if (respuestaCliente === true || respuestaCliente === "SI"){
-            alert ("+54 11 2904439 este es nuestro numero de celular para contactarnos y concreatar una reunion, lo esperamos.")
-        }
-        else{
-            alert("Esperamos volver a verte")
-        }
-    return("Gracias por su tiempo.")
-    }
-
-
-
-
-                                                 //Servicio URANO.                         
-    function urano(){
-         let respuestaCliente = prompt("Este servicio se llama " + servicio3 + " y tiene un valor de $15000 ARS, ¿Desea continuar con este servicio? SI-NO").toUpperCase().trim( )
-
-        if (respuestaCliente === true || respuestaCliente === "SI"){
-            alert ("+54 11 2904439 este es nuestro numero de celular para contactarnos y concreatar una reunion, lo esperamos.")
-        }
-        else{
-            alert("Esperamos volver a verte")
-        }
-    return("Gracias por su tiempo.")
+                if (respuestaCliente === true || respuestaCliente === "SI"){
+                    alert ("+54 11 2904439 este es nuestro numero de celular para contactarnos y concreatar una reunion, lo esperamos.")
+                }
+                else{
+                    alert("Esperamos volver a verte")
+                } 
+            return "Gracias por su tiempo"  
+            }
     }
 
 
 
 
 
-let consulta = confirm("¿Estas interesado en nuestros servicios de Marketing Digital? Contamos con estos 3 " + serviciosMFl())
-    
+
+                                            //Servicio JUPITER
+    const jupiter = new Servicio("Jupiter", "4 publicaciones", "$9000 ARS")
+
+
+
+
+
+                                            //Servicio SATURNO
+    const saturno = new Servicio("Saturno", "8 publicaciones", "$11000 ARS")
+
+
+
+
+
+                                            //Servicio URANO                        
+    const urano = new Servicio("Urano", "12 publicaciones", "$15000 ARS")
+
+
+
+
+
+let consulta = confirm("¿Estas interesado en nuestros servicios de Marketing Digital? Contamos con estos 3 servicios:" + serviciosMFl)
 
 
 
@@ -79,22 +70,22 @@ if(consulta === true){
     while(interesCliente !=" " && interesCliente != null){
 
         if(interesCliente === "jupiter"){
-            alert(jupiter())
+            alert(jupiter.info())
             break;
         }
         
         else if(interesCliente === "saturno"){
-            alert(saturno())
+            alert(saturno.info())
             break;
         }
         
         else if(interesCliente === "urano"){
-            alert(urano())
+            alert(urano.info())
             break;
         }
 
         else{
-            alert("No contamos con el servicio " + interesCliente + ", intente con uno de estos sercicios: " + serviciosMFl())
+            alert("No contamos con el servicio " + interesCliente + ", intente con uno de estos sercicios: " + serviciosMFl)
             break;
         }
     }
