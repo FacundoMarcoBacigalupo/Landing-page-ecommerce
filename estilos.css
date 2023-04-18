@@ -1,0 +1,183 @@
+body{
+  background-color: gray;
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+.si-no {
+  width: 35%;
+  background: #e9e5e5;
+  color: #1a1a1a;
+  border-style: solid;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: bold;
+}
+
+
+
+button[type=submit]{
+  background-image: linear-gradient(to right, black 0%, #434343 51%, black 100%);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  background-size: 200% auto;
+  color: black;            
+  box-shadow: 0 0 20px;
+  border-radius: 10px
+}
+
+button[type=submit]:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+  transition: all .9s
+}
+
+button[type=submit]:active{
+  scale: 0.8;
+  transition: all .8s
+}
+
+
+
+
+
+
+
+#estas {
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+}
+
+#estas {
+  background-image: url(../Imagenes/cohete\ 2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  margin-bottom: 0;
+  border-radius: 0;
+  text-shadow: 0 0 10px #1a1a1a;
+  color: #e9e5e5;
+}
+
+
+
+
+
+
+
+
+.containerFooter {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "fotoFooter redesFooter serviciosFooter" 
+  "fotoFooter redesFooter serviciosFooter" 
+  "copyrightFooter copyrightFooter copyrightFooter";
+
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #e9e5e5;
+}
+
+.fotoFooter {
+  grid-area: fotoFooter;
+  border-radius: 60px;
+}
+
+.puertoFooter {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.redesFooter {
+  grid-area: redesFooter;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+#tiktok img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+#tiktok:hover {
+  transform: scale(0.9);
+  transition: 1.1s;
+}
+
+#ig img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+#ig:hover {
+  transform: scale(0.9);
+  transition: 1.1s;
+}
+
+#fb img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#fb:hover {
+  transform: scale(0.9);
+  transition: 1.1s;
+}
+
+.serviciosFooter {
+  grid-area: serviciosFooter;
+  text-align: center;
+}
+.serviciosFooter h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.serviciosFooter h2::first-letter {
+  font-size: 40px;
+}
+.serviciosFooter h2:active {
+  scale: 0.8;
+  transition: all 0.8s;
+}
+.serviciosFooter a {
+  color: #e9e5e5;
+  text-decoration: none;
+}
+.serviciosFooter li {
+  font-size: 16px;
+  padding: 5px;
+}
+
+
+.copyrightFooter {
+  grid-area: copyrightFooter;
+  padding: 5px 5px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
