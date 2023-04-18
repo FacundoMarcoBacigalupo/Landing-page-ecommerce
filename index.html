@@ -1,42 +1,142 @@
+<!-- Pagina Home !-->
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="agencia marketing digital, agencia marketing digital argentina, agencia marketing digital buenos aires, agencia marketing digital desarrollo web, marketing digital, MFL">
+    <meta name="description" content="Somos una Agencia de Marketing Digital, con precios accesibles, buscando ser diferentes y únicos.">
+    <meta name="author" content="MFL">
+    <meta name="language" content="Spanish">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="./Imagenes/mfl-32x32.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./estilos.css">
 
-    <title>Proyecto JS</title>
+    <title>MFL</title>
 </head>
 
 
 
 
+
 <body>
-    <header>
-        <ul>
-            <a href=""><li>Home</li></a>
-            <a href=""><li>Contactanos</li></a>
-            <a href=""><li>Servicios</li></a>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <!-- Logo -->
+        <a class="navbar-brand" href="./index.html"><img src="./imagenes/mfl-32x32.png" class="logo" alt="LogoMFL"></a>
+
+        <!-- Boton -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <!-- Navbar links -->
+        <div class="collapse navbar-collapse barraNav" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link efecto underline-linea" href="./index.html" id="home">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link efecto underline-linea" href="./Secciones/Informacion.html">Información</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link efecto underline-linea" href="./Secciones/Equipo.html">Equipo</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link efecto underline-linea" href="./Secciones/Historia.html">Historia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link efecto underline-linea" href="./Secciones/Servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link efecto underline-linea" href="./Secciones/Contactanos.html">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link efecto underline-linea" href="./Secciones/Blog.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Fin barra de navegación -->
+
+
+
+
+    <div class="jumbotron" id="estas">
+
+        <strong><h1>¿Estás listo para el despegue de tu marca?</h1></strong>
+        
+        <a href="./Secciones/Servicios.html"><button type="submit" class="si-no">SI</button></a>
+        <a href="./Secciones/NO.html"><button type="submit" class="si-no">NO</button></a>
+    </div>
+
+
+
+
+
+
+
+    <article class="quienesSomos">
+        <img src="./imagenes/LOGOTIPO MFL cortado.jpg" alt="FotoBackground">
+        <img src="./imagenes/LOGOTIPO MFL cortado.jpg" alt="FotoAnimacion">
+    </article>
+
+
+
+
+
+
+
+        <h3 class="frasesMotivacionales">
+            “Los éxitos más importantes se consiguen cuando existe la posibilidad de fracasar” – Mark Zuckerberg
+        </h3>
+
+
+
+
+
+
+
+
+    <footer class="containerFooter">
+
+        <img src="./imagenes/LOGOTIPO MFL cortado.jpg" class="fotoFooter" alt="">
+
+
+        <div class="redesFooter">
+            <p class="puertoFooter">Se parte de nuestro puerto espacial</p>
+
+            <a href="https://www.tiktok.com/@mfl_cm?lang=es" id="tiktok" target="_blank"><img src="./imagenes/LOGOTIPO MFL cortado.jpg" alt="TikTok"></a>
+
+            <a href="https://www.instagram.com/agencia.mfl/" id="ig" target="_blank"><img src="./imagenes/LOGOTIPO MFL cortado.jpg" alt="Instagram"></a>
+
+            <a href="https://www.facebook.com/mflcm" id="fb" target="_blank"><img src="./imagenes/LOGOTIPO MFL cortado.jpg" alt="Facebook"></a>
+        </div>
+
+
+        <ul class="serviciosFooter">
+            <h2><a href="./Secciones/Servicios.html">Servicios</a></h2>
+            <li>Gestión de Redes Sociales</li>
+            <li>Google ADS</li>
+            <li>Desarrollo Web</li>
         </ul>
-    </header>
 
-    
-        <strong><h1>MFL</h1></strong>
-        <h2>MFl es un ...............</h2>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ea qui, neque commodi laborum accusamus excepturi tempora animi quod quo, natus repellendus corporis hic, sed fugiat. Dolor beatae magnam quo.</p>
-
-
-
-
-
-    <footer>
-        <h2>Pie de Pagina</h2>
-        <p>Todo los derechos reservados</p>
+        <p class="copyrightFooter">Argentina, Buenos Aires ©2023 MFL. Todos los derechos reservados.</p>
     </footer>
 
+
+
+
     <script src="./main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 </body>
 </html>
