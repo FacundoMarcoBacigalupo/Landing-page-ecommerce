@@ -41,7 +41,7 @@ class Stock{
 
 
 
-fetch("../stock.json")
+fetch("https://raw.githubusercontent.com/FacundoMarcoBacigalupo/ProyectoFinal-MarcoBacigalupo/main/stock.json")
 .then(response => response.json())
 
 
