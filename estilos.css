@@ -1,5 +1,4 @@
                                                 /* Hoja de estilos */
-
 *::after,
 *::before,
 *{
@@ -8,11 +7,28 @@
     box-sizing: border-box;
 }
 
+
 body{
     font-family:'Times New Roman', Times, serif;
     color: #141414;
     background-color: #d1d1d1;
 }
+
+body::-webkit-scrollbar{
+        width: 10px;
+    }
+body::-webkit-scrollbar-track{
+    background-color: #141414;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #303030;
+}
+
+
+
+
+
+
 
 .icon-cart{
     width: 40px;
@@ -334,6 +350,9 @@ header{
 .hidden{
     display: none;
 }
+
+
+
 
 
 

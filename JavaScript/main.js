@@ -1,5 +1,4 @@
-                                                // JavaScript
-// Lista de todos los elemntos
+//Lista de todos los elementos
 const btnCart = document.querySelector('.container-cart-icon');
 
 const containerCartProducts = document.querySelector('.container-cart-products');
@@ -8,36 +7,42 @@ const productoLista = document.querySelector('.container-cartas');
 
 const valorTotal = document.querySelector('.total-pagar');
 
-const countProducts = document.querySelector('#contador-productos');
-
-const cartEmpty = document.querySelector('.cart-empty');
-
-const cartTotal = document.querySelector('.cart-total');
-
-const cartInfo = document.querySelector('.cart-product');
-
 const filaProducto = document.querySelector('.fila-product');
 
+let countProducts = document.querySelector('#contador-productos');
 
+let cartEmpty = document.querySelector('.cart-empty');
 
+let cartTotal = document.querySelector('.cart-total');
 
+let cartInfo = document.querySelector('.cart-product');
 
-btnCart.addEventListener('click', () => {
-    containerCartProducts.classList.toggle('esconder-cart');
-});
-
-
-
-
-// Variable de arreglo de Productos
+//Variable de arreglo de Productos
 let todosLosProductos = [];
 
 
 
 
-productoLista.addEventListener('click', evento => {
-	if (evento.target.classList.contains('btn-add-cart')) {
-		const product = evento.target.parentElement;
+
+
+
+
+const containerCarrito = () =>{
+    containerCartProducts.classList.toggle('esconder-cart');
+};
+
+btnCart.addEventListener('click', containerCarrito)
+
+
+
+
+
+
+
+
+const cargarCarrito = (e) =>{
+	if (e.target.classList.contains("btn-add-cart")) {
+		const product = e.target.parentElement;
 
 		const infoProduct = {
 			cantidad: 1,
@@ -50,33 +55,41 @@ productoLista.addEventListener('click', evento => {
 		);
 
 
-		if (existe) {
-			const products = todosLosProductos.map(product => {
-				if (product.titulo === infoProduct.titulo) {
+		if (existe){
+			const products = todosLosProductos.map(product =>{
+
+				if (product.titulo === infoProduct.titulo){
 					product.cantidad++;
-					return product;
+					return product
 				} 
-				else {
-					return product;
+				else{
+					return product
 				}
 			});
-			todosLosProductos = [...products];
+
+			todosLosProductos = [...products]
 		}
-		else {
-			todosLosProductos = [...todosLosProductos, infoProduct];
+		else{
+			todosLosProductos = [...todosLosProductos, infoProduct]
 		}
 
 
 		mostrarHTML();
-	}
-});
+		renderCarrito()
+		}
+};
+
+productoLista.addEventListener('click', cargarCarrito)
 
 
 
 
-filaProducto.addEventListener('click', evento => {
-	if (evento.target.classList.contains('icono-cierre')) {
-		const product = evento.target.parentElement;
+
+
+
+filaProducto.addEventListener('click', e => {
+	if (e.target.classList.contains('icono-cierre')) {
+		const product = e.target.parentElement;
 		const titulo = product.querySelector('p').textContent;
 
 		todosLosProductos = todosLosProductos.filter(
@@ -84,6 +97,7 @@ filaProducto.addEventListener('click', evento => {
 		);
 
 		mostrarHTML();
+		renderCarrito()
 	}
 });
 
@@ -91,7 +105,8 @@ filaProducto.addEventListener('click', evento => {
 
 
 
-// Funcion para mostrar  HTML
+
+//Funcion para mostrar HTML
 const mostrarHTML = () => {
 	if (!todosLosProductos.length) {
 		cartEmpty.classList.remove('hidden');
@@ -104,26 +119,31 @@ const mostrarHTML = () => {
 		cartTotal.classList.remove('hidden');
 	}
 
+//Limpiar HTML
+	filaProducto.innerHTML = ''
+};
 
 
 
 
-// Limpiar HTML
-	filaProducto.innerHTML = '';
+
+
+//Renderizado
+function renderCarrito(){
 
 	let total = 0;
 	let totalDeProductos = 0;
 
-	todosLosProductos.forEach(product => {
+		todosLosProductos.forEach(product => {
 		const containerProduct = document.createElement('div');
 		containerProduct.classList.add('cart-product');
 
 		containerProduct.innerHTML = `
-            <div class="info-cart-product">
-                <span class="cantidad-producto-carrito">${product.cantidad}</span>
-                <p class="titulo-producto-carrito">${product.titulo}</p>
-                <span class="precio-producto-carrito">${product.precio}</span>
-            </div>
+			<div class="info-cart-product">
+				<span class="cantidad-producto-carrito">${product.cantidad}</span>
+				<p class="titulo-producto-carrito">${product.titulo}</p>
+				<span class="precio-producto-carrito">${product.precio}</span>
+			</div>
 			<img src="./Imagenes/x.png" alt="Imagen de una X" class="icono-cierre">`;
 
 
@@ -137,4 +157,33 @@ const mostrarHTML = () => {
 
 	valorTotal.innerText = `$${total} ARS`;
 	countProducts.innerText = totalDeProductos;
-}
+
+
+	addLocalStorage()
+};
+
+
+
+
+
+
+
+
+
+
+
+//LocalStorage para almacenar los productos del carrito
+function addLocalStorage(){
+	localStorage.setItem("container-cart-products", JSON.stringify(todosLosProductos))
+};
+
+
+window.onload = function(){
+	let storage = JSON.parse(localStorage.getItem("container-cart-products"));
+
+	if(storage){
+		todosLosProductos = storage;
+		mostrarHTML()
+		renderCarrito()
+	}
+};

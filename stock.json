@@ -1,0 +1,43 @@
+[
+    {
+        "id": "1",
+        "img": "./Imagenes/JordanOne.jpg",
+        "name": "Jordan One",
+        "price" : 15000
+    },
+
+    {
+        "id": "2",
+        "img": "./Imagenes/NikeAirForce.jpg",
+        "name": "Nike Air Force",
+        "price" : 9000
+    },
+
+    {
+        "id": "3",
+        "img": "./Imagenes/AdidasSuperstar.jpg",
+        "name": "Adidas Superstar",
+        "price" : 11000
+    },
+
+    {
+        "id": "4",
+        "img": "./Imagenes/Vans.jpg",
+        "name": "Vans",
+        "price" : 12000
+    },
+
+    {
+        "id": "5",
+        "img": "./Imagenes/MediasNike.jpg",
+        "name": "Medias Nike",
+        "price" : 1500
+    },
+
+    {
+        "id": "6",
+        "img": "./Imagenes/MediasAdidas.jpg",
+        "name": "Medias Adidas",
+        "price" : 1000
+    }
+]
