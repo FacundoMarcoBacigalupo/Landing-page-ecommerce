@@ -1,11 +1,10 @@
 //Cuando el usuario salga del Sitio Web se cambia el TAG "title" del head
-    let tituloAnterior = document.title
+let tituloAnterior = document.title
 
 window.addEventListener("blur", () => {
     tituloAnterior = document.title
     document.title = "¡Zapatillas super BARATAS!"
 })
-
 
 window.addEventListener("focus", () => {
     document.title = tituloAnterior
@@ -22,36 +21,45 @@ window.addEventListener("focus", () => {
 
 
 
+
 //Traigo el JSON y lo utilizo
 const containerCartas = document.querySelector('.container-cartas');
-let stock = []
+let stocks = []
+let elements = []
 
 
 
-
-class Stock{
-    constructor(id, img, name, price){
+class Stock {
+    constructor(id, img, name, price) {
         this.id = id;
         this.img = img;
         this.name = name;
         this.price = price
     }
+
+    action() { //Agus: En lugar de ser un const aislado en otro .js lo convertimos en un metodo de la clase
+        Swal.fire({
+            icon: 'success',
+            title: '¡Se agrego al carrito!',
+            text: 'Atrévete a arriesgarte, no sea que dejes tus talentos enterrados en el suelo...',
+            width: '60%',
+            backdrop: 'true',
+            timer: '2000',
+            timerProgressBar: 'true',
+            position: 'center'
+        })
+    }
 }
 
+fetch("../stock.json")
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(s => {
+            stocks.push(new Stock(s.id, s.img, s.name, s.price))
+        })
 
-
-
-fetch("/ProyectoFinal-MarcoBacigalupo/stock.json")
-.then(response => response.json())
-.then(data =>{
-    data.forEach(s =>{
-        stock.push(new Stock(s.id, s.img, s.name, s.price))
-    })
-
-    stock.forEach(stock =>{
-
-
-        containerCartas.innerHTML+=`
+        stocks.forEach(stock => {
+            containerCartas.innerHTML += `
         <article class="carta alerts">
 
             <figure>
@@ -68,4 +76,7 @@ fetch("/ProyectoFinal-MarcoBacigalupo/stock.json")
         `
     })
 
+        stocks.forEach(stock => {
+        document.getElementById(stock.id).addEventListener("click", stock.action);
+    })
 })
