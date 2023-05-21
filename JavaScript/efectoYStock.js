@@ -40,7 +40,8 @@ class Stock{
 
 
 
-fetch("https://facundomarcobacigalupo.github.io/ProyectoFinal-MarcoBacigalupo/stock.json")
+
+fetch("/ProyectoFinal-MarcoBacigalupo/stock.json")
 .then(response => response.json())
 .then(data =>{
     data.forEach(s =>{
