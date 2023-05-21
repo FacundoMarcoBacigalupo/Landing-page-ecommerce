@@ -37,7 +37,7 @@ class Stock {
         this.price = price
     }
 
-    action() { //Agus: En lugar de ser un const aislado en otro .js lo convertimos en un metodo de la clase
+    action() {
         Swal.fire({
             icon: 'success',
             title: '¡Se agrego al carrito!',
