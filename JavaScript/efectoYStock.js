@@ -40,10 +40,8 @@ class Stock{
 
 
 
-fetch("../stock.json")
+fetch("https://facundomarcobacigalupo.github.io/ProyectoFinal-MarcoBacigalupo/stock.json")
 .then(response => response.json())
-
-
 .then(data =>{
     data.forEach(s =>{
         stock.push(new Stock(s.id, s.img, s.name, s.price))
