@@ -25,7 +25,6 @@ window.addEventListener("focus", () => {
 //Traigo el JSON y lo utilizo
 const containerCartas = document.querySelector('.container-cartas');
 let stocks = []
-let elements = []
 
 
 
