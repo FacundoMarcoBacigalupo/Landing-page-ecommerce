@@ -51,7 +51,9 @@ class Stock {
     }
 }
 
-fetch("../stock.json")
+
+
+fetch("/ProyectoFinal-MarcoBacigalupo/stock.json")
     .then(response => response.json())
     .then(data => {
         data.forEach(s => {
