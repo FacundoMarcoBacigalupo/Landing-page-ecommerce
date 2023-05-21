@@ -55,7 +55,7 @@ class Stock {
 
 
 
-fetch(window.location.href.includes("localhost") ?"/ProyectoFinal-MarcoBacigalupo/stock.json" :"../stock.json")
+fetch(window.location.href.includes("localhost") ? "../stock.json" : "/ProyectoFinal-MarcoBacigalupo/stock.json")
 
     .then(response => response.json())
     .then(data => {
