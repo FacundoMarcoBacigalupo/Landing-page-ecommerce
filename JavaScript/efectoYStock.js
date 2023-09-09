@@ -55,7 +55,7 @@ class Stock {
 
 
 
-fetch("/ProyectoFinal-MarcoBacigalupo/stock.json")
+fetch("/Landing-page-ecommerce/stock.json")
 
     .then(response => response.json())
     .then(data => {
